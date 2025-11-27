@@ -17,4 +17,10 @@ public class EmailGeneratorController {
         String response = emailGeneratorService.generateEmailReply(emailRequest);
         return ResponseEntity.ok(response);
     }
+
+    // ✅ New root endpoint
+    @GetMapping("/")
+    public ResponseEntity<String> home() {
+        return ResponseEntity.ok("Email Generator Backend is live!");
+    }
 }
